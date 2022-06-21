@@ -33,12 +33,15 @@ INSTALLED_APPS = [
     "corsheaders",
     # SWAGGER
     'drf_yasg',
+    # Debug toolbar
+    "debug_toolbar",
     # APPS
     'category.apps.CategoryConfig',
     'reports.apps.ReportsConfig',
 ]
 
 MIDDLEWARE = [
+    "debug_toolbar.middleware.DebugToolbarMiddleware",
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     "corsheaders.middleware.CorsMiddleware",
@@ -99,9 +102,9 @@ WSGI_APPLICATION = 'core.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'db_reports',
+        'NAME': 'dal_reports',
         'USER': 'root',
-        'PASSWORD': '',
+        'PASSWORD': '1234',
         'HOST': '',
         'PORT': '3306',
         'OPTIONS': {
@@ -155,4 +158,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "http://127.0.0.1:9000",
+]
+
+INTERNAL_IPS = [
+    # ...
+    "127.0.0.1",
+    # ...
 ]

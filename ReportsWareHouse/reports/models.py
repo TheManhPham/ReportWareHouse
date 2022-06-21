@@ -8,7 +8,7 @@ class Reports(models.Model):
         db_table = 'apps_reports'
 
     def __str__(self):
-        return self.name
+        return self.reports_name
 class Reports_Departments(models.Model):
     departments_name = models.CharField(max_length=99, null=False, unique=True)
     class Meta:
