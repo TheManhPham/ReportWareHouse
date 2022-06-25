@@ -11,7 +11,7 @@ class ReportsSerializer(serializers.ModelSerializer):
 class Reports_MonthSerializer(serializers.ModelSerializer):
     class Meta:
         model = Reports_Month
-        fields = ['name','quarter']
+        fields = ['month_name','quarter']
 class Reports_DateSerializer(serializers.ModelSerializer):
     month = Reports_MonthSerializer()
     class Meta:

@@ -1,9 +1,10 @@
-from .serializers import ParamReportsData
-from rest_framework import viewsets,status
+from .serializers import ParamReportsData, Reports_MonthSerializer
+from rest_framework import viewsets,status, generics
 from rest_framework.decorators import action
 from rest_framework.response import Response
 from drf_yasg.utils import swagger_auto_schema
 from django.db import connection
+from .models import Reports_Month
 cursor = connection.cursor()
 REPORTS_REVENUE = 'apps_reports_revenue'
 REPORTS_PROFIT = 'apps_reports_profit'
@@ -31,9 +32,15 @@ class ReportsViewSet(viewsets.ViewSet):
     @action(methods=['post'], detail=True, url_path='get-fields')
     def get_fields(self,request,pk):
         if (pk == '1'):
-            cursor.execute('CALL `get_columns_name`()')
+            return Response({'tax_amount', 'total_including_tax', 'total_excluding_tax'},status=status.HTTP_200_OK)
         if (pk == '2'):
-            cursor.execute('CALL `get_columns_name`()')
-        # GET COLUMNS NAME
-        field_names = [i[0] for i in cursor.description]
-        return Response(field_names,status=status.HTTP_200_OK)
+            return Response({'profit', 'net_profit', 'gross_profit'},status=status.HTTP_200_OK)
+
+
+# class find_month_by_date_and_year(generics.ListAPIView):
+#     serializer_class = Reports_MonthSerializer
+
+#     def get_queryset(self):
+#         # print(self.kwargs['date'], '1')
+        
+#         return Reports_Month.objects.filter(reportsmonth__date = self.kwargs['date'])
