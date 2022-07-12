@@ -1,0 +1,100 @@
+(https://insights.stackoverflow.com/survey/2021#technology)blk rexd ebody meyd
+https://web.simple-mmo.com/market/listings?type%5B0%5D=Weapon&max_level=20&order_col=cost&order=desc&page=29
+mysql -h mysql-81970-0.cloudclusters.net -P 18908 -u admin -p
+560973 *
+355569 *5
+158582 *5
+548896 *5
+374223 **5
+347093 **6
+646693 *6
+238875 *6
+304109 **6
+326669 **6
+415263 *6
+501875 **6
+581621 **6
+571041 **7
+506010 *7
+260539 **7
+44612 *7
+477631 **8
+529423 **8
+658781 **8
+575731 **9
+506639 **11
+150938 *12
+155131 **12
+534389 **12
+563675 **14
+426449 **14
+379774 *14
+390745 *17
+352459 **17
+548417 *17
+341349 **18
+675116 *18
+513075 **18
+433441 **18
+342461 *18
+539025 *19
+543731 *19
+341835 **19
+426107 *19
+495275 **20
+612611 **20
+663427 **20
+209086 **20
+315310 **20
+520291 **20
+568033 *20
+54872 **20
+350218 *24
+780274 *25
+823795 **26
+530642 *27
+--
+436900 *38
+581241 *46
+342467 *52
+556798 ***53
+435216 *55
+510048 *57
+440259
+577273 *78
+618886 ***94
+--
+372417 ***104
+689333 *123
+590651 *133
+429228 ***145s
+674882 *150
+386412 *168
+335637 *174
+788067 *180
+585039 *197
+function resolveAfter2Seconds() {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve('resolved');
+    }, 2000);
+  });
+}
+const result = await resolveAfter2Seconds();
+var parser = new DOMParser();
+var request = new XMLHttpRequest();
+function checkdata(urluser){
+    request.open("GET", urluser, true);
+    result;
+    request.send(null);
+    result;
+    request.onreadystatechange = function() {
+      if (request.readyState == 4){
+          result;
+          var doc = parser.parseFromString(request.responseText, "text/html");
+          result;
+          console.log(doc)
+          result;
+          console.log(doc.getElementsByTagName("main")[0].getElementsByTagName("div")[6].getElementsByTagName("div")[0].getElementsByTagName("div")[33].getElementsByTagName("div")[6].innerHTML)
+  }};
+}
